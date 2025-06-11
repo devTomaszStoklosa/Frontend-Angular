@@ -1,0 +1,23 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+  <div>
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" formControlName="surname">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="passwordHash">
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" formControlName="age">
+  </div>
+  <button type="submit">Submit</button>
+</form>

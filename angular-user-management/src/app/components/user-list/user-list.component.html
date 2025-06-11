@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let user of users" (click)="onSelect(user)">
+    <span>{{ user.name }} {{ user.surname }}</span>
+    <button (click)="onEdit(user, $event)">Edit</button>
+    <button (click)="onDelete(user.id); $event.stopPropagation()">Delete</button>
+  </li>
+</ul>
+<button (click)="onAdd()">Add User</button>

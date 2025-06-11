@@ -1,0 +1,27 @@
+.user-detail {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.user-detail h2 {
+    color: #333;
+}
+
+.user-detail p {
+    font-size: 14px;
+    color: #666;
+}
+
+.user-detail .user-info {
+    margin-bottom: 10px;
+}
+
+.user-detail .user-info label {
+    font-weight: bold;
+}
+
+.user-detail .user-info span {
+    margin-left: 5px;
+}
