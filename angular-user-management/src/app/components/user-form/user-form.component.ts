@@ -9,7 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css'],
   imports: [ReactiveFormsModule],
-  standalone: true
+  standalone: true,
+  providers: [UserService]
 })
 export class UserFormComponent implements OnInit {
   userForm: FormGroup;
@@ -42,9 +43,11 @@ export class UserFormComponent implements OnInit {
   }
 
   loadUser(): void {
+    if (this.userId !== null) {
       this.userService.getById(this.userId).subscribe(user => {
-      this.userForm.patchValue(user);
-    });
+        this.userForm.patchValue(user);
+      });
+    }
   }
 
   onSubmit(): void {

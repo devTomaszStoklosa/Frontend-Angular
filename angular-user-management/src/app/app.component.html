@@ -1,2 +1,9 @@
-<h1>{{ title }}</h1>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <span>Angular User Portfolio</span>
+  <span class="spacer"></span>
+  <button mat-icon-button routerLink="/users"><mat-icon>people</mat-icon></button>
+  <button mat-icon-button routerLink="/users/new"><mat-icon>person_add</mat-icon></button>
+</mat-toolbar>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
